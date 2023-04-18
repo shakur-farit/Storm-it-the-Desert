@@ -70,13 +70,13 @@ public class MissileMove : BulletMove
             CompareTo(Vector3.Distance(transform.position, b.transform.position));
         });
 
-        if (Application.isEditor)
-        {
-            for (int i = 0; i < enemies.Length; i++)
-            {
-                print(Vector3.Distance(transform.position, enemies[i].transform.position));
-            }
-        }
+        //if (Application.isEditor)
+        //{
+        //    for (int i = 0; i < enemies.Length; i++)
+        //    {
+        //        print(Vector3.Distance(transform.position, enemies[i].transform.position));
+        //    }
+        //}
 
         return enemies[0].transform;
     }

@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDestructable: 0
-  backToPool: 1
+  backToPool: 0
   destroyAfter: 2
   spawnObjects:
   - {fileID: 8992465198682792661}
@@ -1051,7 +1051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDestructable: 0
-  backToPool: 1
+  backToPool: 0
   destroyAfter: 2
   spawnObjects:
   - {fileID: 2505406364901321711}
@@ -1360,7 +1360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootProfile: {fileID: 11400000, guid: c79f84608c6e1ec4aaa3d43f1f47d685, type: 2}
-  bulletPrefabs: {fileID: 7024288742192492764, guid: 65cf5f10aacd87446915b153c9f7932b, type: 3}
+  bulletPrefabs: {fileID: 7024288742192492764, guid: 9f11870aca735e2499f85da19d5a1f9d, type: 3}
   firePoint: {fileID: 0}
 --- !u!1 &2505406366567128141
 GameObject:
@@ -1407,7 +1407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootProfile: {fileID: 11400000, guid: c79f84608c6e1ec4aaa3d43f1f47d685, type: 2}
-  bulletPrefabs: {fileID: 7024288742192492764, guid: 65cf5f10aacd87446915b153c9f7932b, type: 3}
+  bulletPrefabs: {fileID: 7024288742192492764, guid: 9f11870aca735e2499f85da19d5a1f9d, type: 3}
   firePoint: {fileID: 0}
 --- !u!1 &2505406366598851105
 GameObject:
@@ -1805,7 +1805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDestructable: 0
-  backToPool: 1
+  backToPool: 0
   destroyAfter: 0
   spawnObjects:
   - {fileID: 2505406366122072007}
@@ -1852,9 +1852,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4325504784897308200, guid: bc9a80bca15d2614ca8e176f34badde8, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
         m_MethodName: DetachChildren
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1239309791290476225, guid: 65f40ad55d1982e46ad6affe2ed6c116, type: 3}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: GameEnd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

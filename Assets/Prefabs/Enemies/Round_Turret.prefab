@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootProfile: {fileID: 11400000, guid: 1050882d0e74e3b44a51ee5146eebd89, type: 2}
-  bulletPrefabs: {fileID: 7024288742192492764, guid: 65cf5f10aacd87446915b153c9f7932b, type: 3}
+  bulletPrefabs: {fileID: 7024288742192492764, guid: 9f11870aca735e2499f85da19d5a1f9d, type: 3}
   firePoint: {fileID: 0}
 --- !u!1 &6901441272268846658
 GameObject:
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootProfile: {fileID: 11400000, guid: 1050882d0e74e3b44a51ee5146eebd89, type: 2}
-  bulletPrefabs: {fileID: 7024288742192492764, guid: 65cf5f10aacd87446915b153c9f7932b, type: 3}
+  bulletPrefabs: {fileID: 7024288742192492764, guid: 9f11870aca735e2499f85da19d5a1f9d, type: 3}
   firePoint: {fileID: 0}
 --- !u!1 &6901441273004297023
 GameObject:
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootProfile: {fileID: 11400000, guid: 1050882d0e74e3b44a51ee5146eebd89, type: 2}
-  bulletPrefabs: {fileID: 7024288742192492764, guid: 65cf5f10aacd87446915b153c9f7932b, type: 3}
+  bulletPrefabs: {fileID: 7024288742192492764, guid: 9f11870aca735e2499f85da19d5a1f9d, type: 3}
   firePoint: {fileID: 0}
 --- !u!1 &6901441273038470131
 GameObject:
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootProfile: {fileID: 11400000, guid: 1050882d0e74e3b44a51ee5146eebd89, type: 2}
-  bulletPrefabs: {fileID: 7024288742192492764, guid: 65cf5f10aacd87446915b153c9f7932b, type: 3}
+  bulletPrefabs: {fileID: 7024288742192492764, guid: 9f11870aca735e2499f85da19d5a1f9d, type: 3}
   firePoint: {fileID: 0}
 --- !u!1 &6901441273040883682
 GameObject:
@@ -589,7 +589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootProfile: {fileID: 11400000, guid: 1050882d0e74e3b44a51ee5146eebd89, type: 2}
-  bulletPrefabs: {fileID: 7024288742192492764, guid: 65cf5f10aacd87446915b153c9f7932b, type: 3}
+  bulletPrefabs: {fileID: 7024288742192492764, guid: 9f11870aca735e2499f85da19d5a1f9d, type: 3}
   firePoint: {fileID: 0}
 --- !u!1 &6901441273222877217
 GameObject:
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootProfile: {fileID: 11400000, guid: 1050882d0e74e3b44a51ee5146eebd89, type: 2}
-  bulletPrefabs: {fileID: 7024288742192492764, guid: 65cf5f10aacd87446915b153c9f7932b, type: 3}
+  bulletPrefabs: {fileID: 7024288742192492764, guid: 9f11870aca735e2499f85da19d5a1f9d, type: 3}
   firePoint: {fileID: 0}
 --- !u!1 &6901441273429768289
 GameObject:
@@ -734,7 +734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootProfile: {fileID: 11400000, guid: 1050882d0e74e3b44a51ee5146eebd89, type: 2}
-  bulletPrefabs: {fileID: 7024288742192492764, guid: 65cf5f10aacd87446915b153c9f7932b, type: 3}
+  bulletPrefabs: {fileID: 7024288742192492764, guid: 9f11870aca735e2499f85da19d5a1f9d, type: 3}
   firePoint: {fileID: 0}
 --- !u!1 &6901441273615926951
 GameObject:
@@ -820,7 +820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootProfile: {fileID: 11400000, guid: 1050882d0e74e3b44a51ee5146eebd89, type: 2}
-  bulletPrefabs: {fileID: 7024288742192492764, guid: 65cf5f10aacd87446915b153c9f7932b, type: 3}
+  bulletPrefabs: {fileID: 7024288742192492764, guid: 9f11870aca735e2499f85da19d5a1f9d, type: 3}
   firePoint: {fileID: 0}
 --- !u!1001 &6901441272309792139
 PrefabInstance:

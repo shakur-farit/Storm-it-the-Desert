@@ -14,15 +14,20 @@ public class AutoShoot : MonoBehaviour
 
     private void OnEnable()
     {
+        SetIntervalValue();
+
+        if (firePoint == null)
+            firePoint = transform;      
+
+        StartCoroutine(ShootingSequence());
+    }
+
+    public void SetIntervalValue()
+    {
         interval = new WaitForSeconds(shootProfile.interval);
         rate = new WaitForSeconds(shootProfile.fireRate);
 
-        if (firePoint == null)
-            firePoint = transform;
-
         totalSpread = shootProfile.spread * shootProfile.amount;
-
-        StartCoroutine(ShootingSequence());
     }
 
     private void OnDisable()
@@ -62,5 +67,10 @@ public class AutoShoot : MonoBehaviour
         temp.transform.Rotate(Vector3.up, angle);
         temp.GetComponent<BulletMove>().speed = shootProfile.speed;
         PoolingManager.instance.ReturnObject(temp, shootProfile.destroyRate);
+    }
+
+    public void SwitchProfile(ShootProfile newProfile)
+    {
+        shootProfile = newProfile;
     }
 }

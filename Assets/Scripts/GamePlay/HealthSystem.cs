@@ -8,6 +8,8 @@ public class HealthSystem : MonoBehaviour
     public GameObject hitEffect, healthBar;
     public bool isEnemy = true;
 
+    public int minScore = 20, maxScore = 50;
+
     private string tagName = "Bullet";
     private float currentHealth;
     private DeathSystem deathSystem;
@@ -18,13 +20,19 @@ public class HealthSystem : MonoBehaviour
         if (isEnemy)
             tagName = "Bullet";
         else
+        {
             tagName = "EnemyBullet";
+
+            maxHealth = StatsManager.instance.GetStatsValue("Health", StatsManager.instance.healthUpgradeList);
+        }
 
         currentHealth = maxHealth;
     }
 
     private void Start()
     {
+        if (isEnemy)
+            LevelManager.instance.RegisterEnemy();
         deathSystem = GetComponent<DeathSystem>();
     }
 
@@ -33,6 +41,9 @@ public class HealthSystem : MonoBehaviour
     {
         if (other.CompareTag(tagName))
         {
+            if (!isEnemy && LevelManager.instance.medals.untouched)
+                LevelManager.instance.PlayerHit();
+
             float damage =  float.Parse(other.name);
             TakeDamage(damage, other);
 
@@ -69,7 +80,10 @@ public class HealthSystem : MonoBehaviour
                 deathSystem.Death();
 
             if (isEnemy)
+            {
                 gameObject.tag = "Untagged";
+                LevelManager.instance.AddEnemyKill(Random.Range(minScore,maxScore+1));
+            }
         }
     }
 

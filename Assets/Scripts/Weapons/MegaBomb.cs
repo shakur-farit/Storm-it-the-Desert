@@ -5,31 +5,27 @@ using UnityEngine;
 public class MegaBomb : MonoBehaviour
 {
     public float radius = 2f, damage = 2f;
-    public ParticleSystem mbFX;
+    public ParticleSystem mbFireFX, mbSmokeFX;
 
     private void Start()
     {
-        if (mbFX != null)
-        {
-            var partMain = mbFX.main;
-            partMain.startSize = radius * partMain.startSize.constant;
-        }
-    }
+        if (mbFireFX == null && mbSmokeFX == null)
+            return;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            DeployBomb();
-        }
-    }
+        var partFireMain = mbFireFX.main;
+        partFireMain.startSize = radius * partFireMain.startSize.constant;
+        var partSmokeMain = mbSmokeFX.main;
+        partSmokeMain.startSize = radius * partSmokeMain.startSize.constant + 2;
 
+
+        radius = StatsManager.instance.GetStatsValue("MegaBomb", StatsManager.instance.megaBombUpgradeList).radius;
+        damage = StatsManager.instance.GetStatsValue("MegaBomb", StatsManager.instance.megaBombUpgradeList).damage;
+    }
 
     public void DeployBomb()
     {
-        Debug.Log("Bdshhhhh!");
-
-        mbFX.Play();
+        mbFireFX.Play();
+        gameObject.transform.DetachChildren();
 
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
 
@@ -37,12 +33,10 @@ public class MegaBomb : MonoBehaviour
         {
             HealthSystem health = colliders[i].GetComponent<HealthSystem>();
 
-            if(health != null && colliders[i].CompareTag("Enemy"))
+            if (health != null && colliders[i].CompareTag("Enemy"))
             {
                 health.TakeDamage(damage, colliders[i]);
-
-                Debug.Log(colliders[i].name + " was fckn destroy by devastating mega blast. BOOOOOOOOOM!");
-            }
+            }   
         }
     }
 }

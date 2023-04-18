@@ -18,6 +18,8 @@ public class Shield : MonoBehaviour
 
         coll = GetComponent<Collider>();
         coll.enabled = false;
+
+        shieldDuration = StatsManager.instance.GetStatsValue("Shield", StatsManager.instance.shieldUpgradeList).shieldDuration;
     }
 
     private void Update()
@@ -31,12 +33,14 @@ public class Shield : MonoBehaviour
 
     public void ShieldUp()
     {
-        StartCoroutine(EngageShield());
+        if(!coll.enabled)
+            StartCoroutine(EngageShield());
     }
 
     private IEnumerator EngageShield()
     {
         coll.enabled = true;
+
         float inAnimDuration = 0.5f;
         float outAnimDuration = 0.5f;
 
@@ -79,7 +83,7 @@ public class Shield : MonoBehaviour
 
             if(health != null && damagePlayer != null)
             {
-                health.TakeDamage(damagePlayer.takemDamageValue, other);
+                health.TakeDamage(damagePlayer.takenDamageValue, other);
             } 
             else if(!other.CompareTag("Enemy"))
             {

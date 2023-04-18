@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootProfile: {fileID: 11400000, guid: 9d248d08663f4b443990ccc331e1653c, type: 2}
-  bulletPrefabs: {fileID: 7024288742192492764, guid: 65cf5f10aacd87446915b153c9f7932b, type: 3}
+  bulletPrefabs: {fileID: 7024288742192492764, guid: 9f11870aca735e2499f85da19d5a1f9d, type: 3}
   firePoint: {fileID: 0}
 --- !u!1 &7939603185767191385
 GameObject:
@@ -689,7 +689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootProfile: {fileID: 11400000, guid: 9d248d08663f4b443990ccc331e1653c, type: 2}
-  bulletPrefabs: {fileID: 7024288742192492764, guid: 65cf5f10aacd87446915b153c9f7932b, type: 3}
+  bulletPrefabs: {fileID: 7024288742192492764, guid: 9f11870aca735e2499f85da19d5a1f9d, type: 3}
   firePoint: {fileID: 0}
 --- !u!1001 &7939603187147074828
 PrefabInstance:

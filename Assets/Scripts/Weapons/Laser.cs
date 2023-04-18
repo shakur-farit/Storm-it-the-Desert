@@ -21,6 +21,8 @@ public class Laser : MonoBehaviour
 
         coll = GetComponent<Collider>();
         coll.enabled = false;
+
+        laserDuration = StatsManager.instance.GetStatsValue("Laser", StatsManager.instance.laserUpgradeList).laserDuration;
     }
 
     private void Update()
@@ -31,7 +33,13 @@ public class Laser : MonoBehaviour
         }
     }
 
-    IEnumerator FireLaser()
+    public void ShootLaser()
+    {
+        if (!laserFired)
+            StartCoroutine(FireLaser());
+    }
+
+    private IEnumerator FireLaser()
     {
         laserFired = true;
 
